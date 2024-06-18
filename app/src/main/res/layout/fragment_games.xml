@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".ui.fragments.GamesFragment">
+
+    <!-- NestedScrollView for scrollable content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <!-- Game Banner Image -->
+            <ImageView
+                android:id="@+id/ivGameBanner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/ic_pubg_banner"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="15dp"/>
+
+            <!-- Game Title and Favorite Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tvGameTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PUBG"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/btnFavorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_favorite"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+            </LinearLayout>
+
+            <!-- Game Rating and Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp">
+
+                <!-- Game Rating -->
+                <TextView
+                    android:id="@+id/tvGameRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rating: 4.5"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="20dp"/>
+
+                <!-- Number of Players -->
+                <TextView
+                    android:id="@+id/tvGamePlayers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Players: 12345"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <!-- Game Description -->
+            <TextView
+                android:id="@+id/tvGameDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PUBG is a player versus player shooter game in which up to one hundred players fight in a battle royale, a type of large-scale last man standing deathmatch where players fight to remain the last alive."
+                android:textColor="@color/material_gray"
+                android:textSize="14sp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Join Game Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnJoinGame"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/join_game"
+                app:cornerRadius="8dp"
+                android:backgroundTint="@color/button_green"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Watch Trailer Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnWatchTrailer"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/watch_trailer"
+                app:cornerRadius="8dp"
+                android:backgroundTint="@color/black"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Divider -->
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                app:dividerColor="@color/gray"/>
+
+            <!-- Additional Game Information -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Additional Info"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Game Info Content -->
+            <TextView
+                android:id="@+id/tvGameInfoContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/game_info_content"
+                android:textColor="@color/material_gray"
+                android:textSize="14sp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Related Games Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/related_games"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRelatedGames"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_related_game"/>
+
+            <!-- Comments Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comments"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Comment Input and Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/etComment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/add_comment"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="10dp"
+                    android:textColorHint="@android:color/darker_gray"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPostComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/post"
+                    app:cornerRadius="8dp"
+                    android:textSize="14sp"
+                    android:backgroundTint="@color/button_green"
+                    android:textColor="@android:color/white"
+                    android:layout_marginStart="10dp"/>
+            </LinearLayout>
+
+            <!-- Comments List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_comment"/>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

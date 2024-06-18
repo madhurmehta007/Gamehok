@@ -150,7 +150,7 @@
                 android:id="@+id/ivCreateOwnTournamentBanner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/create_own_tournament_banner"
+                android:src="@drawable/ic_banner"
                 app:layout_constraintTop_toBottomOf="@id/divider"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
