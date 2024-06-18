@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Gamehok</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="play_tournament_by_games">Play Tournament by Games</string>
+    <string name="compete_in_battles">Compete in Battles</string>
+    <string name="view_all">View All</string>
+    <string name="_2456">2456</string>
+    <string name="_10000">10000</string>
+    <string name="registration_open">Registration Open</string>
+    <string name="see_tournament_details">See Tournament Details</string>
+    <string name="pubg_tournament_by_red_bull">PUBG Tournament By Red Bull</string>
+    <string name="people_to_follow">People to follow</string>
+    <string name="view_more">View More</string>
+    <string name="legend_gamer">Legend Gamer</string>
+    <string name="details">Details</string>
+    <string name="more_tournaments_for_you">More tournaments for you</string>
+    <string name="join_tournament">Join Tournament</string>
+    <string name="_9890987754">9890987754</string>
+    <string name="support_gamehok_com">Support@gamehok.com</string>
+    <string name="description">This is the in house organiser of this\n platform you can follow our page on this\n platform for regular updates</string>
+    <string name="follow">Follow</string>
+</resources>
