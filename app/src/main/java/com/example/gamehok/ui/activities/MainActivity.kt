@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
             when(it.itemId) {
                 R.id.navigation_home -> navController.navigate(R.id.navigation_home)
+                R.id.navigation_tournament -> navController.navigate(R.id.navigation_tournament)
 
                 else -> {}
 

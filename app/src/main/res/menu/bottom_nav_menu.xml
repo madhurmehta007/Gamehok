@@ -7,9 +7,9 @@
             android:title="Home" />
 
         <item
-            android:id="@+id/navigation_tournaments"
+            android:id="@+id/navigation_tournament"
             android:icon="@drawable/ic_tournaments"
-            android:title="Tournaments" />
+            android:title="Tournament" />
 
         <item
             android:id="@+id/navigation_friends"
