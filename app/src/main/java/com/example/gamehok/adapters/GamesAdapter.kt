@@ -13,7 +13,7 @@ class GamesAdapter(
     val gamesList:MutableList<Games>
     ):
         RecyclerView.Adapter<GamesAdapter.GamesViewHolder>(){
-
+    var onItemClick: (() -> Unit)? = null
     class GamesViewHolder(val binding:ItemGameBinding,context: Context):
         RecyclerView.ViewHolder(binding.root){
 
@@ -31,6 +31,9 @@ class GamesAdapter(
        val games = gamesList[position]
         holder.binding.ivGameImage.setImageResource(games.ImageResId)
         holder.binding.tvGameName.text = games.title
+        holder.binding.cvGames.setOnClickListener{
+            onItemClick?.invoke()
+        }
     }
 
     override fun getItemCount(): Int {
